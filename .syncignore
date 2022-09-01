@@ -1,0 +1,5 @@
+# CodeSync won't sync the files in the .syncignore. It follows same format as .gitignore.
+.grafos/
+.grafos/*
+venv/
+venv/*

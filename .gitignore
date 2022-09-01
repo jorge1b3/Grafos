@@ -1,2 +1,4 @@
 .grafos/
 .grafos/*
+venv/
+venv/*

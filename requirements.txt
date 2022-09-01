@@ -9,3 +9,17 @@ Pillow==9.2.0
 pyparsing==3.0.9
 python-dateutil==2.8.2
 six==1.16.0
+
+defusedxml~=0.7.1
+cffi~=1.15.1
+ipython~=8.4.0
+jupyter~=1.0.0
+pip~=21.3.1
+attrs~=21.4.0
+wheel~=0.37.1
+tornado~=6.2
+Jinja2~=3.1.2
+setuptools~=60.2.0
+pytz~=2022.2.1
+pandas~=1.4.3
+ipykernel~=6.15.1

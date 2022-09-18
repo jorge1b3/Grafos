@@ -44,8 +44,18 @@ pos = nx.circular_layout(G)
 nodes = {letters[i]: (x[i], y[i]) for i in range(len(x))}
 
 # Draw the graph with the weights as the edge labels and rainbow colors.
+colormap = plt.cm.rainbow
+
 nx.draw(G, nodes, edge_color=[G[u][v]['weight'] for (u, v) in G.edges()],
         edge_cmap=plt.cm.rainbow, with_labels=True)
+divider = make_axes_locatable(plt.gca())
+ax_cb = divider.new_horizontal(size="5%", pad=0.05)
+pesosw = list([G[u][v]['weight'] for (u, v) in G.edges()])
+norm = mpl.colors.Normalize(vmin=min(pesosw), vmax=max(pesosw))
+cb1 = mpl.colorbar.ColorbarBase(ax=ax_cb, cmap=colormap, norm=norm, orientation='vertical')
+plt.gcf().add_axes(ax_cb)
+# plt.savefig("original.png", transparent=True, dpi=150)
+
 # plt.savefig("prueba.png", transparent=True, dpi=150)
 plt.show()
 

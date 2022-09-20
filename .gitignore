@@ -2,3 +2,5 @@
 .grafos/*
 venv/
 venv/*
+.idea/
+.idea/*
